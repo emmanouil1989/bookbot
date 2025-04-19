@@ -22,9 +22,12 @@ def sort_on(dict):
     return dict["num"]
 
 def generate_report(path, total_worlds, chars_dictionary):
-        beggining_of_report = f"--- Begin report of {path} ---"
-        end_of_report = f"--- End report ---"
-        total_worlds= f"{total_worlds} words found in the document\n"
+        title = '============ BOOKBOT ============'
+        beggining_of_report = f"Analyzing book found at {path}"
+        end_of_report = f"============= END ==============="
+        word_count_tile = '----------- Word Count ----------'
+        total_worlds= f"Found {total_worlds} total words\n"
+        char_count_title = "--------- Character Count -------"
         list_of_dictionaries = []
         count_array = []
         for char, count in chars_dictionary.items():
@@ -33,7 +36,8 @@ def generate_report(path, total_worlds, chars_dictionary):
         for word_dictionary in sorted_list:
             char = word_dictionary["char"]
             count = word_dictionary["num"]
-            count_array.append(f"The character {char} was found {count} times")
+            count_array.append(f" {char}: {count}")
         count_string = "\n".join(count_array)
-        report = f"{beggining_of_report}\n{total_worlds}\n{count_string}\n{end_of_report}"
+        
+        report = f"{title}\n{beggining_of_report}\n{word_count_tile}\n{total_worlds}{char_count_title}\n{count_string}\n{end_of_report}"
         return report   
