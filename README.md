@@ -1,1 +1,2 @@
-BookBot is my first [Boot.dev](https://www.boot.dev) project!
+- This a course project to build a bookbot to could the letters for a given text.
+- At the moment the text is hard coded and it is 'books/frankenstein.txt'

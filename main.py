@@ -31,7 +31,7 @@ def sort_on(dict):
     return dict["num"]
 
 def generate_report(path, total_worlds, chars_dictionary):
-        beggining_of_report = f"---Begin report of {path}---"
+        beggining_of_report = f"--- Begin report of {path} ---"
         end_of_report = f"--- End report ---"
         total_worlds= f"{total_worlds} words found in the document\n"
         list_of_dictionaries = []
